@@ -4,38 +4,64 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/jpeg" href="/books/logo_favicon.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+    <title>Bookshelf</title>
     
-    <script type="module" crossorigin src="/books/assets/style-7575db19.js"></script>
-    <link rel="stylesheet" href="/books/assets/style-0101c124.css">
+    <script type="module" crossorigin src="/books/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/books/assets/style-d5eaecd2.js">
+    <link rel="modulepreload" crossorigin href="/books/assets/vendor-0cb09735.js">
+    <link rel="stylesheet" href="/books/assets/style-1f50ecb5.css">
   </head>
   <body>
     <header class="header">
-  <a href="./index.html"> <img src="LOGO" alt="логотип" /></a>
-  <nav class="nav">
+  <a href="./index.html"
+    ><svg class="header-logo" width="50" height="50">
+      <use href="../img/icons.svg#icon-logo"></use>
+    </svg>
+  </a>
+  <nav class="nav header-navigation">
     <ul class="nav-list">
       <li class="nav-item">
-        <a href="./index.html" class="nav-link">Home</a>
+        <a class="nav-link" href="./index.html">Home</a>
       </li>
 
       <li class="nav-item">
-        <a href="./shoping-list.html" class="nav-link">shoping-list</a>
+        <a class="nav-link" href="./shoping-list.html">shoping-list</a>
       </li>
     </ul>
   </nav>
   <div class>перемикач теми</div>
-  <div>burger-menu</div>
+  <div class="header-burger-menu">
+    <div class="btn-burger-menu">
+      <svg width="50" height="50">
+        <use href="../img/icons.svg#icon-burger-menu"></use>
+      </svg>
+    </div>
+  </div>
 </header>
 
     <div class="container">
-      <div>
-        
+      <div class="left-block">
+        <section class="section-categories">
+  <ul class="category-list js-category-list"></ul>
+</section>
+
         
       </div>
 
-      
+      <section class="main-section">
+  <ul class="book-list js-book-list"></ul>
+</section>
+
     </div>
-    
+    <section>
+  <div class="backdrop hidden js-header-backdrop">
+    <div class="header-modal">
+      <a class="nav-link" href="./index.html">Home</a
+      ><a class="nav-link" href="./shoping-list.html">Shoping-list</a>
+    </div>
+  </div>
+</section>
+
 
     
   </body>
