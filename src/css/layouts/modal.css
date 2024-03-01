@@ -1,0 +1,22 @@
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 64px;
+  left: 0;
+  background-color: blue;
+  z-index: 10;
+}
+.backdrop.hidden {
+  display: none;
+}
+.header-modal {
+  width: 500px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
