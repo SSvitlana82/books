@@ -1,5 +1,7 @@
 function categoryTemplate(category) {
-  return `<li class="category-item">${category.list_name}</li>`;
+  return `<li class="category-item">
+        <a class="category-all-list>${category.list_name}</a>
+        </li>`;
 }
 export function categoriesTemplate(array) {
   return array.map(categoryTemplate).join('');
