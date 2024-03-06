@@ -16,3 +16,13 @@ function onBtnSeeMoreCLick(e) {
     refs.bookList.innerHTML = markup;
   });
 }
+refs.bookList.addEventListener('click', onBookClick);
+function onBookClick(eventBook) {
+  if (eventBook.tagret === eventBook.currentTarget) {
+    return;
+  }
+  if (eventBook.target.nodeName === 'BUTTON') {
+    return;
+  }
+  console.log('open modal');
+}

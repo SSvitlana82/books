@@ -1,19 +1,23 @@
 .header {
-  position: relative;
+  /* position: relative;
   z-index: 900;
   box-sizing: border-box;
   border: 1.5px solid #111;
   border-radius: 0 0 8px 8px;
   background-color: #fff;
-  display: flex;
+  
   justify-content: space-between;
-  align-items: center;
+  
   margin: 0 auto;
   height: 64px;
   width: 100%;
   @media screen and (min-width: 768px) {
-    height: 72px;
-  }
+    height: 72px; */
+}
+.header-container {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
 .header-logo {
@@ -25,11 +29,12 @@
 
 .header-navigation {
   display: none;
-  gap: 16px;
-  justify-content: flex-start;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-start;
   }
 }
 
@@ -39,7 +44,7 @@
   }
 }
 .header-navigation {
-  display: none;
+  display: flex;
   @media screen and (min-width: 768px) {
     display: block;
   }
@@ -47,16 +52,23 @@
 
 .btn-burger-menu {
   background-color: red;
-}
-
-.nav-list {
   display: flex;
 }
 
+.nav-list {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    /* align-items: center;
+    gap: 16px;
+    justify-content: flex-start; */
+  }
+}
 /* ========================перемикач теми================================== */
-.ios-toggle {
+/* .ios-toggle {
   box-sizing: border-box;
-  display: inline-block;
+  display: flex;
   font-size: 5.3px;
   width: 30px;
 }
@@ -130,5 +142,5 @@
 }
 .ios-toggle input:checked:active + label::before {
   left: calc(100% - 3.2em);
-}
+} */
 /* ================================================= */

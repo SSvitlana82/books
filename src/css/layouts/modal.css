@@ -1,4 +1,4 @@
-.backdrop {
+.header-backdrop {
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -7,7 +7,7 @@
   background-color: blue;
   z-index: 10;
 }
-.backdrop.hidden {
+.header-backdrop.hidden {
   display: none;
 }
 .header-modal {
@@ -19,4 +19,29 @@
   align-items: center;
   justify-content: center;
   padding: 0;
+}
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0;
+  background-color: rgba(12, 12, 12, 0.377);
+  z-index: 10;
+  overflow: auto;
+}
+.backdrop.hidden {
+  display: none;
+}
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 15% auto;
 }
