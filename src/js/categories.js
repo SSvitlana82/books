@@ -24,10 +24,13 @@ function onCategoryClick(e) {
   if (e.target === e.currentTarget) {
     return;
   }
+
   if (e.target.textContent === 'ALL CATEGORIES') {
     renderTopBooks();
+    refs.bookList.classList.remove('book-list-seemore');
     return;
   }
+  refs.bookList.classList.add('book-list-seemore');
   getBooksByCategory(e.target.textContent).then(value => {
     console.log(value);
     if (value.length === 0) {

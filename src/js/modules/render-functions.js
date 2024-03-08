@@ -7,9 +7,10 @@ export function categoriesTemplate(array) {
   return array.map(categoryTemplate).join('');
 }
 
-function bookTemlate({ book_image, author, title }) {
-  return `<li>
-      <img src="${book_image}" alt="bookname" />
+function bookTemlate({ book_image, author, title, _id }) {
+  return `<li class="book-item" data-id="${_id}">
+  <div class="book-item-img">
+      <img src="${book_image}" alt="bookname"/></div>
       <h3>${title}</h3>
       <p>${author}</p>
     </li>`;
@@ -21,7 +22,7 @@ export function booksTemplate(array) {
 function popularCategoryTemplate(topCategory) {
   return `<li class="popular-top-book">
       <h3>${topCategory.list_name}</h3>
-      <ul>
+      <ul class="top-book-list">
          ${booksTemplate(topCategory.books)}
       </ul>
       <button data-top="${topCategory.list_name}">SEE MORE</button>

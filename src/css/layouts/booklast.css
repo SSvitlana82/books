@@ -1,0 +1,41 @@
+.main-section {
+  display: flex;
+}
+
+.book-list {
+  display: flex;
+  gap: 24px;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  font-weight: 400;
+  font-style: normal;
+}
+/* .book-item {
+  @media screen and (min-width: 1440px) {
+    width: calc((100% - 48px) / 3);
+  }
+  flex-basis: calc((100% - 96px) / 5);
+} */
+
+.popular-top-book {
+  display: inline;
+}
+.top-book-list {
+  display: flex;
+  gap: 24px;
+}
+.book-list-seemore {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.book-item-img {
+  width: 180px;
+  height: 256px;
+  overflow: hidden;
+}
+.book-item-img img {
+  object-fit: cover;
+  width: 100%;
+}

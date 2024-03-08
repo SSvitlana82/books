@@ -1,12 +1,14 @@
 import { getBooksByCategory, getPopularBooks } from './modules/books-api';
 import { refs } from './modules/refs';
 import { booksTemplate } from './modules/render-functions';
+import { openModal } from './modal';
 
 refs.bookList.addEventListener('click', onBtnSeeMoreCLick);
 function onBtnSeeMoreCLick(e) {
   if (e.target.nodeName !== 'BUTTON') {
     return;
   }
+  refs.bookList.classList.add('book-list-seemore');
 
   getBooksByCategory(e.target.dataset.top).then(value => {
     if (value.length === 0) {
@@ -24,5 +26,8 @@ function onBookClick(eventBook) {
   if (eventBook.target.nodeName === 'BUTTON') {
     return;
   }
-  console.log('open modal');
+  const liElem = eventBook.target.closest('.book-item');
+
+  const id = liElem.dataset.id;
+  openModal(id);
 }

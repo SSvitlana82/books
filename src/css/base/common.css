@@ -96,7 +96,7 @@ footer,
 header,
 hgroup,
 menu,
-nav,
+/* nav, */
 section {
   display: block;
 }
@@ -133,8 +133,9 @@ a {
   box-sizing: border-box;
 }
 
-/* перевірити по загальному стилю */
-.container {
+/* /* /* перевірити по загальному стилю */
+/* .container {
   width: 1440 px;
   padding: 0 24px;
 }
+ */

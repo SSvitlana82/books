@@ -10,6 +10,7 @@ export const refs = {
     closeBtn: document.querySelector('.js-modal-btn-close'),
     message: document.querySelector('.js-message-modal'),
     shopListBtn: document.querySelector('.js-btn-modal-buy'),
+    content: document.querySelector('.js-modal-content'),
   },
   /* themeBtn: document.querySelector(), */
 };
