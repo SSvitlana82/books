@@ -1,3 +1,4 @@
+import { updateModalMarkup } from './modules/storage';
 import { getBookInfo } from './modules/books-api';
 /* import { modalLinksTemplate } from './modules/render-functions'; */
 import { refs } from './modules/refs';
@@ -8,6 +9,8 @@ export async function openModal(idBook) {
   const markupBook = modalTemplate(book);
   refs.modal.content.innerHTML = markupBook;
   showModal();
+  updateModalMarkup(idBook);
+  refs.modal.shopListBtn.setAttribute('data-id', idBook);
 }
 export function showModal() {
   refs.modal.mainBackdrop.classList.remove('hidden');
