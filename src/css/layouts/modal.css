@@ -45,3 +45,7 @@
   padding: 0;
   margin: 15% auto;
 }
+
+.hide-scroll {
+  overflow: hidden;
+}

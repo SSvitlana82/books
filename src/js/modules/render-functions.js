@@ -91,3 +91,39 @@ function modallinkTemplate(infoLink) {
                 </a>
               </li>`;
 }
+
+function shopBookTemlate({
+  book_image,
+  author,
+  title,
+  buy_links,
+  description,
+  list_name,
+  _id,
+}) {
+  return `<li>
+      <div>
+        <img src="${book_image}" alt="book" />
+      </div>
+      <div>
+        <div>
+          <div>
+            <h2>${title}</h2>
+            <h3>${list_name}</h3>
+          </div>
+          <div>
+            
+          </div> 
+        </div>
+        <div><p>${description}</p></div>
+        <div>
+          <div><p>${author}</p></div>
+          <div>${modalLinksTemplate(buy_links)}</div>
+        </div>
+      </div>
+    </li>`;
+}
+
+export function shopListTemlate(array) {
+  return array.map(shopBookTemlate).join('');
+}
