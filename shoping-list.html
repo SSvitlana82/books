@@ -6,54 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     
-    <script type="module" crossorigin src="/books/assets/style-d5eaecd2.js"></script>
-    <link rel="stylesheet" href="/books/assets/style-1f50ecb5.css">
+    <script type="module" crossorigin src="/books/commonHelpers2.js"></script>
+    <link rel="modulepreload" crossorigin href="/books/assets/render-functions-e29f07a1.js">
+    <link rel="stylesheet" href="/books/assets/render-functions-d3c3a6d3.css">
   </head>
   <body>
     <header class="header">
-  <a href="./index.html"
-    ><svg class="header-logo" width="50" height="50">
-      <use href="../img/icons.svg#icon-logo"></use>
-    </svg>
-  </a>
-  <nav class="nav header-navigation">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a class="nav-link" href="./index.html">Home</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link" href="./shoping-list.html">shoping-list</a>
-      </li>
-    </ul>
-  </nav>
-  <div class="ios-toggle">
-    <input type="checkbox" id="ios-toggle" /><label for="ios-toggle"></label>
-  </div>
-  <div class="header-burger-menu">
-    <div class="btn-burger-menu">
-      <svg width="50" height="50">
-        <use href="../img/icons.svg#icon-burger-menu"></use>
+  <div class="conteiner header-container">
+    <a class="logo-link" href="./index.html"
+      ><svg class="header-logo" width="107" height="27">
+        <use href="../img/icons.svg#icon-logo"></use>
       </svg>
-    </div>
+    </a>
+    <nav class="nav header-navigation">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a class="nav-link-home is-active" href="./index.html">HOME</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link-shop" href="./shoping-list.html"
+            ><span>SHOPPING-LIST</span>
+            <svg class="logo-bag" width="20" height="20">
+              <use href="../img/icons.svg#icon-cart"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <!-- <div class="ios-toggle">
+        <input type="checkbox" id="ios-toggle" /><label
+          for="ios-toggle"
+        ></label>
+      </div> -->
+      <div class="header-burger-menu">
+        <div class="btn-burger-menu">
+          <svg class="logo-bag" width="50" height="50">
+            <use href="../img/icons.svg#icon-burger-menu"></use>
+          </svg>
+        </div>
+      </div>
+    </nav>
   </div>
 </header>
 
     <div>
       <div>
-        
+        <section class="support">
+  <div class="support-title">
+    <h3 class="support-title-name">Support Ukraine</h3>
+    <svg width="20" height="32">
+      <use href="../img/icons.svg#icon-ukraine"></use>
+    </svg>
+  </div>
+  <ul class="support-list js-support-list">
+    <!-- <li class="support-item">
+      <a href="" class="support-item-link">
+        <p class="support-item-name"></p>
+        <svg class="support-item-logo">
+          <use></use>
+        </svg>
+      </a>
+    </li> -->
+    `;
+  </ul>
+</section>
+
       </div>
 
       <section class="main-section">
-  <ul class="book-list js-book-list"></ul>
+  <ul class="book-list js-book-list">
+    <!-- <li>
+      <div>
+        <img src="" alt="book" />
+      </div>
+      <div>
+        <div>
+          <div>
+            <h2></h2>
+            <h3></h3>
+          </div>
+          <div>
+            <svg class="" width="" height="">
+              <use href=""></use>
+            </svg>
+          </div>
+        </div>
+        <div><p></p></div>
+        <div>
+          <div><p></p></div>
+          <div></div>
+        </div>
+      </div>
+    </li> -->
+  </ul>
 </section>
 
     </div>
     <section>
-  <div class="backdrop hidden js-header-backdrop">
+  <div class="header-backdrop hidden js-header-backdrop">
     <div class="header-modal">
       <a class="nav-link" href="./index.html">Home</a
       ><a class="nav-link" href="./shoping-list.html">Shoping-list</a>
+    </div>
+  </div>
+  <div class="backdrop hidden js-backdrop">
+    <div class="modal">
+      <div class="modal-content js-modal-content"></div>
+      <div class="modal-btn-close js-modal-btn-close">
+        <svg width="28" height="28">
+          <use href="../img/icons.svg#icon-x-close"></use>
+        </svg>
+      </div>
+      <button type="button" class="btn-modal-buy js-btn-modal-buy">
+        ADD TO SHOPPING LIST
+      </button>
+      <p class="message-modal js-message-modal">
+        Сongratulations! You have added the book to the shopping list. To
+        delete, press the button “Remove from the shopping list”.
+      </p>
     </div>
   </div>
 </section>
