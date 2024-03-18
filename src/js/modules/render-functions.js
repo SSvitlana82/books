@@ -87,7 +87,10 @@ function modallinkTemplate(infoLink) {
                 <a
                   href="${infoLink.url}"
                   class="link-buy-modal"
-                  >${infoLink.name}
+                  >
+                  <svg class="icon-link" width="18px" height="18px">
+              <use href=".${icons}#${infoLink.name}"></use>
+            </svg>
                 </a>
               </li>`;
 }
@@ -101,29 +104,34 @@ function shopBookTemlate({
   list_name,
   _id,
 }) {
-  return `<li>
-      <div>
+  return `<li class="item-shoplist" data-id="${_id}">
+      <div class="img-book">
         <img src="${book_image}" alt="book" />
       </div>
-      <div>
-        <div>
-          <div>
-            <h2>${title}</h2>
-            <h3>${list_name}</h3>
+      <div class="book-info-shoplist">
+        <div class="book-info-header" >
+          <div class="book-name-header">
+            <h2 class="book-title-header">${title}</h2>
+            <h3 class="book-category-header">${list_name}</h3>
           </div>
-          <div>
-            
+          <div class="icon-header">
+            <svg class="icon-trash-header" width="18px" height="18px">
+              <use href=".${icons}#icon-x-close"></use>
+            </svg>
           </div> 
         </div>
-        <div><p>${description}</p></div>
-        <div>
-          <div><p>${author}</p></div>
-          <div>${modalLinksTemplate(buy_links)}</div>
+        <div class="book-desc-shoplist">
+          <p>${description}</p>
+        </div>
+        <div class="book-footer">
+          <div class="book-author-footer"><p>${author}</p></div>
+          <ul class="book-link-footer">${modalLinksTemplate(buy_links)}</ul>
         </div>
       </div>
     </li>`;
 }
 
 export function shopListTemlate(array) {
+  console.log(array.map(shopBookTemlate).join(''));
   return array.map(shopBookTemlate).join('');
 }
