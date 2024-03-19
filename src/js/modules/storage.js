@@ -15,7 +15,6 @@ export function updateModalMarkup(bookId) {
   const bookInShop = shopList.some(book => {
     return book._id === bookId;
   });
-  console.log(bookInShop);
 
   if (bookInShop === false) {
     refs.modal.shopListBtn.textContent = 'ADD TO SHOPPING LIST';

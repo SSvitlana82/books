@@ -23,7 +23,7 @@ export function hideModal() {
   window.removeEventListener('keydown', onModalEsc);
 }
 refs.modal.mainBackdrop.addEventListener('click', onCloseModal);
-console.log('hello');
+
 function onCloseModal(e) {
   if (e.target === e.currentTarget) {
     hideModal();
@@ -32,7 +32,6 @@ function onCloseModal(e) {
 }
 
 function onModalEsc(i) {
-  console.log(i);
   if (i.code === 'Escape') {
     hideModal();
     return;

@@ -14,13 +14,11 @@ refs.categoryList.addEventListener('click', onCategoryClick);
 getCategories().then(value => {
   value.unshift({ list_name: 'ALL CATEGORIES' });
   const markup = categoriesTemplate(value);
-  console.log(markup);
+
   refs.categoryList.innerHTML = markup;
 });
 
 function onCategoryClick(e) {
-  console.log(e.target);
-  console.log(e.currentTarget);
   if (e.target === e.currentTarget) {
     return;
   }
@@ -32,7 +30,6 @@ function onCategoryClick(e) {
   }
   refs.bookList.classList.add('book-list-seemore');
   getBooksByCategory(e.target.textContent).then(value => {
-    console.log(value);
     if (value.length === 0) {
       return alert('Noooooooo');
     }
@@ -45,7 +42,7 @@ function renderTopBooks() {
     if (value.length === 0) {
       return alert('Noooooooo');
     }
-    console.log(value);
+
     const markup = popularBooksTemplate(value);
     refs.bookList.innerHTML = markup;
   });

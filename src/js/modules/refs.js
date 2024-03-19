@@ -4,6 +4,7 @@ export const refs = {
   boorgerMenuBackdrop: document.querySelector('.js-header-backdrop'),
   categoryList: document.querySelector('.js-category-list'),
   bookList: document.querySelector('.js-book-list'),
+  errorBook: document.querySelector('.error-img'),
 
   modal: {
     mainBackdrop: document.querySelector('.js-backdrop'),

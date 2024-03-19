@@ -1,5 +1,5 @@
 import icons from '../../img/icons.svg';
-console.log(icons);
+
 function categoryTemplate(category) {
   return `<li class="category-item">${category.list_name}</li>`;
 }
@@ -72,9 +72,11 @@ export function modalTemplate({
         </ul>`;
 }
 function modalLinksTemplate(buy_links) {
-  const arrayModal = ['Amazon', 'Apple Books', 'Bookshop'];
+  const arrayModal = ['Amazon', 'Apple_Books', 'Bookshop'];
   const links = arrayModal.map(nameStore => {
-    return buy_links.find(objectLink => objectLink.name === nameStore);
+    return buy_links.find(
+      objectLink => objectLink.name.replaceAll(' ', '_') === nameStore
+    );
   });
   return links.map(modallinkTemplate).join('');
 }
@@ -104,6 +106,7 @@ function shopBookTemlate({
   list_name,
   _id,
 }) {
+  console.log(buy_links);
   return `<li class="item-shoplist" data-id="${_id}">
       <div class="img-book">
         <img src="${book_image}" alt="book" />
@@ -132,6 +135,5 @@ function shopBookTemlate({
 }
 
 export function shopListTemlate(array) {
-  console.log(array.map(shopBookTemlate).join(''));
   return array.map(shopBookTemlate).join('');
 }
