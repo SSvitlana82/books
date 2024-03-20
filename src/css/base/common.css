@@ -102,9 +102,9 @@ section {
 }
 body {
   line-height: 24px;
-  background-color: #ffffff;
+  background-color: var(--primary-color-bg);
   font-family: sans-serif;
-  color: #111;
+  color: var(--primary-color-text);
   font-size: 18px;
 }
 ol,

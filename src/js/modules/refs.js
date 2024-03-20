@@ -13,5 +13,5 @@ export const refs = {
     shopListBtn: document.querySelector('.js-btn-modal-buy'),
     content: document.querySelector('.js-modal-content'),
   },
-  /* themeBtn: document.querySelector(), */
+  themeBtn: document.querySelector('.js-toggle'),
 };

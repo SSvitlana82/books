@@ -1,5 +1,4 @@
 import { refs } from './modules/refs';
-/* refs.donations.addEventListener(); */
 
 import { supportsTemplate } from './modules/render-functions';
 const support = [

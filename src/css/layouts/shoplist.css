@@ -101,5 +101,5 @@
   gap: 10px;
 }
 .icon-link {
-  stroke: #111111;
+  stroke: var(--primary-color-text);
 }

@@ -1,0 +1,16 @@
+.light-theme {
+  --primary-color-bg: rgb(255, 255, 255, 0.6);
+  --primary-color-text: black;
+  --secondary-color-bg: white;
+  --secondary-color-text: rgba(180, 175, 175, 1);
+  --third-color-text: rgba(17, 17, 17, 0.6);
+  --forth-color-text: rgba(79, 46, 232, 1);
+}
+.dark-theme {
+  --primary-color-bg: #202024;
+  --primary-color-text: white;
+  --secondary-color-bg: black;
+  --secondary-color-text: rgba(180, 175, 175, 1);
+  --third-color-text: rgba(255, 255, 255, 0.6);
+  --forth-color-text: rgba(234, 198, 69, 1);
+}

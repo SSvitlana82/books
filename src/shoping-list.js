@@ -1,6 +1,8 @@
 import { refs } from './js/modules/refs';
 import { shopListTemlate } from './js/modules/render-functions';
 import { updateStorige } from './js/modules/storage';
+import './js/donations';
+import './js/modules/toggle';
 
 const shopList = JSON.parse(localStorage.getItem('shopListStorage')) || [];
 const markup = shopListTemlate(shopList);

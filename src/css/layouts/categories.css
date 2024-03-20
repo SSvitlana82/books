@@ -30,7 +30,7 @@
   font-size: 18px;
   line-height: 1.33333;
   letter-spacing: -0.02em;
-  color: #1119;
+  color: var(--third-color-text);
   -webkit-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out;
   text-align: left;
@@ -38,4 +38,7 @@
   @media screen and (min-width: 1440px) {
     height: 100%;
   }
+}
+.category-list :first-child {
+  color: var(--forth-color-text);
 }
